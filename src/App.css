@@ -1,0 +1,5 @@
+.container {
+    max-width: 1000px; /*como foi delimitado tamanho pro width da pra centralizar com um margin*/
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
