@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 
 import {createBrowserRouter, RouterProvider, Route} from "react-router-dom"
+import ErrorBoundary from './errors/errorboundary.jsx'
 
 import "./index.css"
 
@@ -11,7 +12,7 @@ import "./index.css"
 import Home from "./routes/Home"
 import NewPost from './routes/NewPost'
 import Post from './routes/Post'
-import Admin from './routes/admin.jsx'
+import Admin from './routes/Admin.jsx'
 import EditPosts from './routes/EditPosts.jsx'
 
 const router = createBrowserRouter ([ //objeto de configuração de roteamento
