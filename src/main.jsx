@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-import {createBrowserRouter, RouterProvider, Route} from "react-router-dom"
+import {createHashRouter, RouterProvider, Route} from "react-router-dom"
 import ErrorBoundary from './errors/errorboundary.jsx'
 
 import "./index.css"
@@ -15,17 +15,17 @@ import Post from './routes/Post'
 import Admin from './routes/Admin.jsx'
 import EditPosts from './routes/EditPosts.jsx'
 
-const router = createBrowserRouter ([ //objeto de configuração de roteamento
+const router = createHashRouter ([ //objeto de configuração de roteamento
   //colocar aqui todos os elementos que vão repetir recursos entre os componentes
   {
     element: <App/>,
     children: [ //isso esta interligado com o Link to={`/ ou /new ou /posts, etc...`}
       {
-        path: "/", // rota home que carrega todos os posts
+        path: "/Blog", // rota home que carrega todos os posts
         element: <Home/>,
       },
       {
-        path: "/new", //a rota new que vai criar os posts depois
+        path: "Blog/new", //a rota new que vai criar os posts depois
         element: <NewPost/>,
       },
       {
@@ -33,11 +33,11 @@ const router = createBrowserRouter ([ //objeto de configuração de roteamento
         element: <Post/> 
       },
       {
-        path: "/admin",
+        path: "Blog/admin",
         element: <Admin/>
       },
       {
-        path: "/posts/edit/:id",
+        path: "posts/edit/:id",
         element: <EditPosts/>
       },
     ]
@@ -46,7 +46,7 @@ const router = createBrowserRouter ([ //objeto de configuração de roteamento
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
+    <RouterProvider router={router} >
     <App />
     </RouterProvider>
   </React.StrictMode>,

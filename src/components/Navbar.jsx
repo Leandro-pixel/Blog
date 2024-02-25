@@ -5,20 +5,20 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
         <h2>
-           <Link to={`/`}>Blog</Link>
+           <Link to={`Blog/`}>Blog</Link>
         </h2>
         <ul>
             <li>
-            <Link to={`/`}>Home</Link>
+            <Link to={`Blog/`}>Home</Link>
             </li>
         
             <li>
-            <Link to={`/new`} className="new-btn">
+            <Link to={`Blog/new`} className="new-btn">
                 New post
             </Link>
             </li>
             <li>
-            <Link to={`/admin`}>
+            <Link to={`Blog/admin`}>
                 Management
             </Link>
             </li>

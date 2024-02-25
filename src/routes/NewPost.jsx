@@ -22,7 +22,7 @@ const NewPost = () => {
       body: post,
     })
 
-    navigate("/")
+    navigate("/Blog")
 
   }
 
